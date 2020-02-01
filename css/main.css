@@ -1,0 +1,167 @@
+/* common */
+.body__conteiner {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+a{
+    text-decoration:none;
+}
+
+/* BTN */
+.btn {
+    /*   width:300px; */
+    height: 34px;
+    background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    color:#333;
+}
+
+.btn:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .07)
+}
+
+.btn.btn--primary {
+    border: 1px solid #65b836;
+    color: #fff;
+    background: #55a532 linear-gradient(#91dd70, #55ae2e);
+}
+
+/* input text */
+.input--text {
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075);
+    font-size: 16px;
+}
+
+.input--text:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075),
+        0 0 5px rgba(81, 167, 232, .5);
+    /* , 쉼표를 통해서 다중으로 박스쉐도우를 넣을 수 있다 */
+}
+
+.input--text::-webkit-input-placeholder {
+    color: #cacaca;
+}
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+/* float clearfix */
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* header */
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, .75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .75);
+    background: #fff;
+}
+
+header .inner {
+    max-width: 980px;
+    height: 78px;
+    margin: 0 auto;
+}
+
+header .menu-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+header .logo a {
+    background: url("../img/logo.svg");
+    width: 32px;
+    height: 32px;
+    display: block;
+    text-indent: -9999px;
+    /*text들여쓰기 img태그의 alt대신 사용 명시적으로 -9999px을 씀*/
+}
+
+header .logo a:hover {
+    background: url("../img/logo_on.svg");
+}
+
+header .main-menu {
+    display: flex;
+    align-items: center;
+}
+
+header .main-menu li a {
+    display: block;
+    /* a태그는 inline이라서 block으로 변경 */
+    padding: 10px;
+    /* padding을 주면 a태그의 영역이 넓어짐 */
+    color: #3c4146;
+}
+
+header .main-menu li a:hover{
+    color:#4078c0;
+}
+
+header .sign-group{
+    display:flex;
+    align-items: center;
+    height: 100%;
+    /* float:right; */
+}
+
+/* order 값이 클 수록 후순위에 배치
+  order 값은 0이 기본값이기 때문에 지정하지 않으면 가장 앞에 위치
+*/
+header .btn-group {
+    order: 2;
+}
+
+#search-form {
+    order: 1;
+
+}
+
+header .sub-menu {
+    display: flex;
+    /* order: 0; */
+}
+
+header .sub-menu  a{
+    padding: 8px;
+    display: block;
+    font-size: 13px;
+    color: #3c4146;
+}
