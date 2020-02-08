@@ -56,11 +56,12 @@
             </div>
             <div class="sign-group float--right">
                 <div class="btn-group">
+                    <!-- HTML에서 태그가 inline형식인 경우 태그 간 개행이 발생하면 브라우저에서는 공간(스페이스 한칸)이 포함됨 -->
                     <a href="#" class="btn sign-in">Sign in</a>
                     <a href="#" class="btn btn--primary sign-up">Sign up</a>
                 </div>
                 <form id="search-form" method="POST" action="">
-                    <input type="text" id="serch" class="input--text" placeholder="Search GitHub">
+                    <input type="text" id="search" class="input--text" placeholder="Search GitHub">
                     <input type="submit" value="Submit">
                 </form>
                 <ul class="sub-menu">
@@ -68,11 +69,9 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Support</a></li>
                 </ul>
-
             </div>
         </div>
     </header>
-
 </div>
 </body>
 </html>

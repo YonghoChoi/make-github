@@ -147,15 +147,34 @@ header .sign-group{
 */
 header .btn-group {
     order: 2;
+    display: flex; /* 버튼이 수평 정렬되도록 flex 지정 */
+}
+
+header .btn-group .sign-in {
+    margin-right: 4px;
 }
 
 #search-form {
     order: 1;
-
+    margin-right: 12px;
 }
 
+#search {
+    width: 160px;
+    font-size: 14px;
+}
+
+/* +는 다음 형제 요소를 지정 
+  버튼을 제거하기 위해 search 텍스트 박스의 submit 버튼을 선택자로 지정
+*/
+#search +[type="submit"] {
+    display: none;
+}
+
+/* li가 block 타입이기 떄문에 항목마다 개행이 발생하는데 이를 수평 정렬하기 위해 flex로 변경 */
 header .sub-menu {
     display: flex;
+    margin-right: 10px;
     /* order: 0; */
 }
 
